@@ -121,6 +121,7 @@
       <input type="submit" value="-" onclick="calc('min')" class="mx-2 btn">
       <input type="submit" value="*" onclick="calc('mul')" class="mx-2 btn">
       <input type="submit" value="/" onclick="calc('div')" class="mx-2 btn">
+      <input type="submit" value="%" onclick="calc('mod')" class="mx-2 btn">
     </div>
 
     <p id="ans"></p>
@@ -139,8 +140,11 @@
         result = first - second;
       } else if (operation === "mul") {
         result = first * second;
-      } else {
+      } else if(operation === "div"){
         result = first / second;
+      }
+      else{
+        first % second ;
       }
 
       document.getElementById("ans").textContent = `Result: ${result}`;

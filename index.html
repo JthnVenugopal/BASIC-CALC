@@ -24,6 +24,9 @@
       background: rgba(0, 0, 0, 0.7);
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     input[type="number"] {
@@ -76,10 +79,11 @@
       text-align: center;
       padding: 20px;
       font-size: 2rem;
-      background-color: #ffb400;
-      color: black;
+     
+      color: rgb(237, 225, 58);
       border-radius: 5px;
       font-weight: bold;
+
     }
 
     /* Media Queries */
@@ -99,9 +103,7 @@
         font-size: 1.2rem;
       }
 
-      #ans {
-        font-size: 1.5rem;
-      }
+      
     }
 
     @media (max-width: 480px) {
@@ -122,12 +124,11 @@
 
       #ans {
         font-size: 1.2rem;
+        min-width: 500px;
+        max-width: 600px;
       }
 
-     .mod-btn{
-
-         max-width: 600px;
-      }
+     
     }
   </style>
 </head>
@@ -144,9 +145,10 @@
       <input type="submit" value="-" onclick="calc('min')" class="mx-2 btn">
       <input type="submit" value="*" onclick="calc('mul')" class="mx-2 btn">
       <input type="submit" value="/" onclick="calc('div')" class="mx-2 btn">
+      
     </div>
-
-    <input type="submit" value="MOD" onclick="calc('mod')" class="mod-btn">
+    <input type="submit" value="%" onclick="calc('mod')" class="mod-btn" style="width: 480px;">
+    
 
     <p id="ans"></p>
   </form>
